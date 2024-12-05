@@ -1,1 +1,1 @@
-# AKS-WorkLoad-Identity-and-SystemAssignedManagedIdentityOnAResource
+# AKS-workload-Identity-and-SystemAssignedManagedIdentityOnAResource
