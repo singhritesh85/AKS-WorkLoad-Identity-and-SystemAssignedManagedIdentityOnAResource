@@ -346,6 +346,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 
   key_vault_secrets_provider {
     secret_rotation_enabled = true
+    secret_rotation_interval = "2m"
   }
 
   tags = {
