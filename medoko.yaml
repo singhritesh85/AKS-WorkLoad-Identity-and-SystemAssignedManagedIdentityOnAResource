@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: get-storage
+  namespace: dexter
+  labels:
+    app: get-storage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: get-storage
+  template:
+    metadata:
+      labels:
+        app: get-storage
+        azure.workload.identity/use: "true"
+    spec:
+      serviceAccountName: dexter-sa
+      containers:
+        - name: get-storage
+          image: chester2004/get-storage
+          ports:
+            - containerPort: 8080
