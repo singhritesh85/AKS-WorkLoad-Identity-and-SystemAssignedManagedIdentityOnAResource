@@ -12,7 +12,7 @@ spec:
   provider: azure
   parameters:
     usePodIdentity: "false"
-    clientID: "0e58f5ba-4137-4d98-a2db-e243f44e2d12" # Setting this to use workload identity
+    clientID: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" # Setting this to use workload identity
     keyvaultName: "dexterkeyvault"       # Set to the name of your key vault
     cloudName: ""                         # [OPTIONAL for Azure] if not provided, the Azure environment defaults to AzurePublicCloud
     objects:  |
@@ -25,7 +25,7 @@ spec:
           objectName: password             # Set to the name of your key
           objectType: secret
           objectVersion: ""
-    tenantId: "8a0fce19-3824-4678-8769-b6c8e37a33ff"        # The tenant ID of the key vault
+    tenantId: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"        # The tenant ID of the key vault
   secretObjects:                              # [OPTIONAL] SecretObjects defines the desired state of synced Kubernetes secret objects
   - data:
     - key: USERNAME                           # data field to populate
@@ -39,7 +39,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   annotations:
-    azure.workload.identity/client-id: "0e58f5ba-4137-4d98-a2db-e243f44e2d12"
+    azure.workload.identity/client-id: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
   name: dexter-sa
   namespace: dexter
 ---
