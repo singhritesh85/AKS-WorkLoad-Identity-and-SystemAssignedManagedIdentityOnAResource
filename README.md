@@ -1,4 +1,4 @@
-# AKS-workload-Identity-and-SystemAssignedManagedIdentityOnAResource
+# AKS-workload-Identity-and-SystemAssignedManagedIdentityOnAResource-Azure
 ![image](https://github.com/user-attachments/assets/988950ee-a37d-4033-97f1-3ca952504eab)
 
 Whenever an application running in Azure Resource tries to Access another Resource then you need Managed Identity, there are two types of Managed Identity one is System Assigned Identity and another is User Assigned Identity. 
